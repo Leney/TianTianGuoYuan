@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sppiner_order_values">
+        <item>全部</item>
+        <item>按最近距离</item>
+        <item>按周边送货</item>
+    </string-array>
+
+    <string-array name="sppiner_distance_values">
+        <item>全部</item>
+        <item>500m内</item>
+        <item>0.5 &#8211; 2km</item>
+        <item>2 &#8211; 5km</item>
+        <item>5 &#8211; 10km</item>
+        <item>10km外</item>
+    </string-array>
+
+    <string-array name="classifies">
+        <item>类目</item>
+        <item>商品</item>
+        <item>店铺</item>
+    </string-array>
+
+</resources>

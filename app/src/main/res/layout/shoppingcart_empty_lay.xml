@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/car"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/cart_empty"
+        android:textColor="@color/goods_name_color"
+        android:textSize="@dimen/goods_name_size"/>
+
+    <Button
+        android:id="@+id/shopping_cart_empty_go_shopping_btn"
+        android:layout_width="182dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_yellow_solid_shape2"
+        android:text="@string/go_shopping"
+        android:textColor="@color/white"
+        android:textSize="@dimen/goods_name_size"/>
+
+</LinearLayout>

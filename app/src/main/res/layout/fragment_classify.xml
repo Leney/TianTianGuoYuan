@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <!-- 左边大分类列表-->
+        <com.ttxg.fruitday.gui.view.RefreshSimpleListView
+            android:id="@+id/clssify_fragment_listview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="@color/classify_title_right_line"
+            android:dividerHeight="@dimen/split_line_height"/>
+        <!-- 显示子分类的fragment-->
+        <fragment
+            class="com.ttxg.fruitday.gui.fragment.ClassifyChildFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:tag="classify_child_fragment"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/choice_goods_adapter_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            fresco:placeholderImage="@drawable/icon_default"/>
+
+        <TextView
+            android:id="@+id/choice_goods_adapter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@id/choice_goods_adapter_icon"
+            android:layout_toRightOf="@id/choice_goods_adapter_icon"
+            android:ellipsize="end"
+            android:lineSpacingExtra="1dp"
+            android:maxLines="2"
+            android:text="山楂片"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <TextView
+            android:id="@+id/choice_goods_adapter_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choice_goods_adapter_name"
+            android:layout_toEndOf="@id/choice_goods_adapter_icon"
+            android:layout_toRightOf="@id/choice_goods_adapter_icon"
+            android:text="￥25"
+            android:textColor="#ff0000"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <com.ttxg.fruitday.gui.view.CenterLineTextView
+            android:id="@+id/choice_goods_adapter_old_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choice_goods_adapter_name"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/choice_goods_adapter_price"
+            android:layout_toRightOf="@id/choice_goods_adapter_price"
+            android:text="￥48"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+
+        <TextView
+            android:id="@+id/choice_goods_adapter_stock_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choice_goods_adapter_price"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/choice_goods_adapter_icon"
+            android:layout_toRightOf="@id/choice_goods_adapter_icon"
+            android:text="库存：500"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+
+        <TextView
+            android:id="@+id/choice_goods_adapter_sales_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choice_goods_adapter_price"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/choice_goods_adapter_stock_num"
+            android:layout_toRightOf="@id/choice_goods_adapter_stock_num"
+            android:text="销量：500"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/divier2"/>
+
+    <TextView
+        android:id="@+id/choice_goods_adapter_store_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="1dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="山楂片"
+        android:textColor="@color/goods_name_color"
+        android:textSize="@dimen/title_text_size"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/split_line_height"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/choice_goods_adapter_go_detail_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rectangle_soid_red_shape"
+            android:lineSpacingExtra="1dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/get_details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <TextView
+            android:id="@+id/choice_goods_adapter_add_to_store_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_yellow_solid_shape"
+            android:lineSpacingExtra="1dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/become_vip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/goods_name_size"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/divier2"/>
+</LinearLayout>

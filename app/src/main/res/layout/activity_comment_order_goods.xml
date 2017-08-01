@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:id="@+id/comment_order_item_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/comment_order_submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/classify_title_select_color"
+        android:gravity="center"
+        android:text="@string/confirm_submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/goods_name_size"/>
+</LinearLayout>

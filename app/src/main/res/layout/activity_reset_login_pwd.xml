@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/login_bg"
+              android:orientation="vertical">
+    <!-- 标题部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/reset_login_pwd_title_back_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/login_back_img"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/find_back_pwd"
+            android:textColor="@color/tab_text_color_select"
+            android:textSize="@dimen/title_text_size"/>
+    </RelativeLayout>
+
+    <!-- 手机号码部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:gravity="end"
+            android:text="+86:"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <EditText
+            android:id="@+id/reset_login_pwd_input_phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:digits="0123456789"
+            android:hint="@string/login_phone_hint"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingEnd="3dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingStart="3dp"
+            android:singleLine="true"
+            android:textColorHint="#aaaaaa"
+            android:textSize="@dimen/goods_price_size"/>
+
+        <com.ttxg.fruitday.gui.view.CountDownTextView
+            android:id="@+id/reset_login_pwd_get_code_btn"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_yellow_shape"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/get_code"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/goods_market_price_color"/>
+
+    <!-- 输入验证码部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:gravity="end"
+            android:text="@string/code"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <EditText
+            android:id="@+id/reset_login_pwd_input_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:hint="@string/code_hind"
+            android:paddingEnd="3dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingStart="3dp"
+            android:singleLine="true"
+            android:textColorHint="#aaaaaa"
+            android:textSize="@dimen/goods_price_size"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/goods_market_price_color"/>
+
+    <!-- 新密码部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:gravity="end"
+            android:text="@string/new_password"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <EditText
+            android:id="@+id/reset_login_pwd_input_pwd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:digits="._0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ"
+            android:hint="@string/password_set_hint"
+            android:inputType="textPassword"
+            android:paddingEnd="3dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingStart="3dp"
+            android:singleLine="true"
+            android:textColorHint="#aaaaaa"
+            android:textSize="@dimen/goods_price_size"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/goods_market_price_color"/>
+
+    <!-- 确认密码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:gravity="end"
+            android:text="@string/password_affirm"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <EditText
+            android:id="@+id/reset_login_pwd_input_pwd_affirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:digits="._0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ"
+            android:hint="@string/password_set_hint"
+            android:inputType="textPassword"
+            android:paddingEnd="3dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingStart="3dp"
+            android:singleLine="true"
+            android:textColorHint="#aaaaaa"
+            android:textSize="@dimen/goods_price_size"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/goods_market_price_color"/>
+
+    <Button
+        android:id="@+id/reset_login_pwd_sure_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/rectangle_soid_red_shape"
+        android:gravity="center"
+        android:text="@string/sure"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_text_size"/>
+</LinearLayout>

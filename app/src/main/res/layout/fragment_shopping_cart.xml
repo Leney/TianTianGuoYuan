@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ttxg.fruitday.gui.view.WraperExpandableListView
+        android:id="@+id/shopping_cart_expandable_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:textSize="@dimen/goods_name_size"
+                android:textColor="@color/goods_name_color"/>
+
+            <!--合计价格-->
+            <TextView
+                android:id="@+id/shopping_cart_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥0.00元"
+                android:textSize="@dimen/goods_name_size"
+                android:textColor="#ff0000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_post_price"
+                android:layout_marginLeft="3dp"
+                android:textSize="@dimen/goods_market_price_size"
+                android:textColor="@color/goods_market_price_color"/>
+        </LinearLayout>
+
+        <!-- 去结算-->
+        <Button
+            android:id="@+id/shopping_cart_go_pay_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/go_pay"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@color/classify_title_select_color"/>
+    </LinearLayout>
+
+</LinearLayout>

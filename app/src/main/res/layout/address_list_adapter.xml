@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/list_item_selector"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+        <!-- 收货人名称-->
+        <TextView
+            android:id="@+id/address_adapter_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="姓名"
+            android:textColor="@color/text_normal"
+            android:textSize="16sp"/>
+        <!-- 电话-->
+        <TextView
+            android:id="@+id/address_adapter_telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13800000000"
+            android:textColor="@color/tab_text_color"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- 地址信息-->
+    <TextView
+        android:id="@+id/address_adapter_address_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:singleLine="true"
+        android:text="广东省深圳南山区"
+        android:textColor="@color/text_normal"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <!-- 设为默认收货地址-->
+        <LinearLayout
+            android:id="@+id/address_adapter_set_default_address_lay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:background="#00000000">
+
+            <ImageView
+                android:id="@+id/address_adapter_default_point_img"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/logistics_status2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_normal"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/set_receive_address_default"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <!--编辑按钮-->
+        <TextView
+            android:id="@+id/address_adapter_edit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/rectangle_shape"
+            android:drawableLeft="@drawable/icon_edit"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/icon_edit"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp"
+            android:text="@string/edit"
+            android:textColor="@color/goods_market_price_color"/>
+
+        <!--删除按钮-->
+        <TextView
+            android:id="@+id/address_adapter_delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_shape"
+            android:drawableLeft="@drawable/icon_edit"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/icon_del1"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp"
+            android:text="@string/delete"
+            android:textColor="@color/goods_market_price_color"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/divier2"/>
+</LinearLayout>

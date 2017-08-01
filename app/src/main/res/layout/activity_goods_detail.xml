@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.ttxg.fruitday.gui.view.WraperScrollView
+        android:id="@+id/goods_detail_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/white"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+        <!--android:descendantFocusability="blocksDescendants"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.jude.rollviewpager.RollPagerView
+                    android:id="@+id/goods_detail_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    app:rollviewpager_hint_gravity="right"
+                    app:rollviewpager_play_delay="3000"/>
+                &lt;!&ndash; vip 专享标签&ndash;&gt;
+                <ImageView
+                    android:id="@+id/goods_detail_vip_lab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/vip_lab"/>
+            </FrameLayout>-->
+
+            <com.ttxg.fruitday.gui.view.RollPagerViewLab
+                android:id="@+id/goods_detail_banner"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                app:rollviewpager_hint_gravity="right"
+                app:rollviewpager_play_delay="3000"/>
+            <TextView
+                android:id="@+id/goods_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11.3dp"
+                android:layout_marginStart="11.3dp"
+                android:layout_marginTop="16dp"
+                android:text="秋葵"
+                android:textColor="@color/goods_name_color"
+                android:textSize="18sp"/>
+
+            <!--价格和市场价-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="11.3dp"
+                android:paddingRight="11.3dp"
+                android:paddingTop="10dp">
+
+                <!-- 左边显示的红色价格-->
+                <TextView
+                    android:id="@+id/goods_detail_price_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥ 0.11"
+                    android:textColor="#ff1f1f"
+                    android:textSize="@dimen/goods_price_size"/>
+
+                <!--左边显示的市场价格-->
+                <com.ttxg.fruitday.gui.view.CenterLineTextView
+                    android:id="@+id/goods_detail_market_price_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥1500"
+                    android:textColor="@color/goods_market_price_color"
+                    android:textSize="@dimen/goods_market_price_size"/>
+
+                <!-- 右边显示的红色价格-->
+                <TextView
+                    android:id="@+id/goods_detail_price_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="￥0.11"
+                    android:textColor="@color/home_group_color"
+                    android:textSize="@dimen/goods_price_size"/>
+
+                <!-- 右边显示的市场价格-->
+                <com.ttxg.fruitday.gui.view.CenterLineTextView
+                    android:id="@+id/goods_detail_market_price_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="市场价：￥ 0.30"
+                    android:textColor="@color/goods_market_price_color"
+                    android:textSize="@dimen/goods_price_size"/>
+            </RelativeLayout>
+            <!-- 销量和运费-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="11.3dp"
+                android:paddingRight="11.3dp">
+
+                <TextView
+                    android:id="@+id/goods_detail_sales_nums"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="销量：20"
+                    android:textColor="@color/goods_sales_color"
+                    android:textSize="@dimen/goods_sales_size"/>
+
+                <TextView
+                    android:id="@+id/goods_detail_postage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ff1f1f"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="3dp"
+                    android:text="运费：￥20"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/goods_sales_size"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="11.3dp"
+                android:background="@color/divier2"/>
+
+            <!-- 种类1的名称-->
+            <TextView
+                android:id="@+id/goods_detail_sku1_type_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="11.3dp"
+                android:paddingRight="11.3dp"
+                android:paddingTop="15dp"
+                android:text="颜色"
+                android:textColor="@color/goods_name_color"
+                android:textSize="@dimen/goods_sales_size"/>
+            <!-- 种类1的具体类别名称显示部分-->
+            <com.ttxg.fruitday.gui.view.SelfAdaptionViewGroup
+                android:id="@+id/goods_detail_sku1_items_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="11.3dp"
+                android:layout_marginLeft="6.3dp"
+                android:layout_marginRight="11.3dp"
+                android:layout_marginStart="6.3dp"
+                android:background="@color/white"/>
+
+            <View
+                android:id="@+id/goods_detail_sku_mid_split_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_line_height"
+                android:background="@color/divier2"/>
+            <!-- 种类2的名称-->
+            <TextView
+                android:id="@+id/goods_detail_sku2_type_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="11.3dp"
+                android:paddingRight="11.3dp"
+                android:paddingTop="10dp"
+                android:text="颜色"
+                android:textColor="@color/goods_name_color"
+                android:textSize="@dimen/goods_sales_size"/>
+            <!-- 种类2的具体类别名称显示部分-->
+            <com.ttxg.fruitday.gui.view.SelfAdaptionViewGroup
+                android:id="@+id/goods_detail_sku2_items_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="11.3dp"
+                android:layout_marginLeft="6.3dp"
+                android:layout_marginRight="11.3dp"
+                android:layout_marginStart="6.3dp"
+                android:background="@color/white"/>
+
+            <View
+                android:id="@+id/goods_detail_sku_split_line"
+                android:layout_width="match_parent"
+                android:layout_height="11.3dp"
+                android:background="@color/divier2"/>
+            <!--购买-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="11.3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="购买："
+                    android:textColor="@color/goods_name_color"
+                    android:textSize="@dimen/goods_sales_size"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_shape"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <!-- 减少按钮-->
+                    <ImageView
+                        android:id="@+id/goods_detail_reduce_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="#dddddd"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/num_less"
+                        android:textColor="@color/goods_name_color"/>
+
+                    <View
+                        android:layout_width="@dimen/split_line_height"
+                        android:layout_height="match_parent"
+                        android:background="#dddddd"/>
+
+                    <TextView
+                        android:id="@+id/goods_detail_buy_nums"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="1"
+                        android:textColor="@color/goods_name_color"
+                        android:textSize="20dp"/>
+
+                    <View
+                        android:layout_width="@dimen/split_line_height"
+                        android:layout_height="match_parent"
+                        android:background="#dddddd"/>
+                    <!-- 增加按钮-->
+                    <ImageView
+                        android:id="@+id/goods_detail_add_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="#dddddd"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/num_add"
+                        android:textColor="@color/goods_name_color"/>
+                </LinearLayout>
+
+                <!-- 库存数量-->
+                <TextView
+                    android:id="@+id/goods_detail_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="库存：90件"
+                    android:textColor="@color/goods_name_color"
+                    android:textSize="@dimen/goods_sales_size"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="11.3dp"
+                android:background="@color/divier2"/>
+            <!--商家信息-->
+            <!--<RelativeLayout
+                android:id="@+id/goods_detail_shop_info_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_selector"
+                android:padding="11.3dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/goods_detail_shop_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    fresco:placeholderImage="@color/divier2"
+                    fresco:roundAsCircle="true"/>
+
+                &lt;!&ndash;<View
+                    android:id="@+id/goods_detail_empty_view"
+                    android:layout_width="5dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/goods_detail_shop_logo"
+                    android:layout_toRightOf="@id/goods_detail_shop_logo"/>&ndash;&gt;
+                &lt;!&ndash; 店铺名称&ndash;&gt;
+                <TextView
+                    android:id="@+id/goods_detail_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11.3dp"
+                    android:layout_marginStart="11.3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/goods_detail_shop_logo"
+                    android:layout_toRightOf="@id/goods_detail_shop_logo"
+                    android:text="店铺名称"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/goods_price_size"/>
+                &lt;!&ndash; 店铺类型&ndash;&gt;
+                <TextView
+                    android:id="@+id/goods_detail_shop_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/goods_detail_shop_name"
+                    android:layout_marginLeft="11.3dp"
+                    android:layout_marginStart="11.3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/goods_detail_shop_logo"
+                    android:layout_toRightOf="@id/goods_detail_shop_logo"
+                    android:background="#83ad3a"
+                    android:paddingBottom="1dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="1dp"
+                    android:text="供货商"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/goods_sales_size"/>
+                &lt;!&ndash; 进入店铺&ndash;&gt;
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/go_store_icon"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/go_store_icon"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/go_store"
+                    android:textSize="14sp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10.6dp"
+                android:background="#f5f5f5"/>-->
+
+            <!-- 商品介绍和商品评价部分-->
+            <RadioGroup
+                android:id="@+id/goods_detail_tab_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--商品介绍-->
+                <RadioButton
+                    android:id="@+id/goods_detail_introduce_tab"
+                    style="@style/radioTabStyle"
+                    android:layout_marginBottom="11.3dp"
+                    android:layout_marginTop="11.3dp"
+                    android:checked="true"
+                    android:text="@string/goods_detail"/>
+
+                <View
+                    android:layout_width="@dimen/split_line_height"
+                    android:layout_height="match_parent"
+                    android:background="#dedede"/>
+                <!-- 商品评价-->
+                <RadioButton
+                    android:id="@+id/goods_detail_commend_tab"
+                    style="@style/radioTabStyle"
+                    android:layout_marginBottom="11.3dp"
+                    android:layout_marginTop="11.3dp"
+                    android:text="@string/goods_commend"/>
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/divier2"/>
+
+            <!--<android.support.v4.view.ViewPager
+                android:id="@+id/goods_detail_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"/>-->
+
+
+            <WebView
+                android:id="@+id/goods_detail_introduce_webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:overScrollMode="never"/>
+            <!-- 暂无商品详情-->
+            <TextView
+                android:id="@+id/goods_detail_introduce_no_any"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/no_goods_details"/>
+
+            <RadioGroup
+                android:id="@+id/goods_detail_commend_radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="33.3dp"
+                android:layout_marginLeft="11.3dp"
+                android:layout_marginRight="11.3dp"
+                android:layout_marginTop="11.3dp"
+                android:orientation="horizontal">
+                <!--好评-->
+                <RadioButton
+                    android:id="@+id/goods_detail_commend_good"
+                    style="@style/radioTabStyle2"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:checked="true"
+                    android:text="@string/commends_good"/>
+                <!-- 中评-->
+                <RadioButton
+                    android:id="@+id/goods_detail_commend_normal"
+                    style="@style/radioTabStyle2"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/commends_normal"/>
+                <!-- 差评-->
+                <RadioButton
+                    android:id="@+id/goods_detail_commend_low"
+                    style="@style/radioTabStyle2"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/commends_low"/>
+            </RadioGroup>
+
+            <!--<FrameLayout
+                android:id="@+id/goods_detail_comment_fragments_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">-->
+            <!-- 好评fragment-->
+            <fragment
+                android:id="@+id/goods_detail_good_comments_fragment"
+                class="com.ttxg.fruitday.gui.fragment.CommentFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/fragment_detail_comment_lay"/>
+            <!-- 中评fragment-->
+            <fragment
+                android:id="@+id/goods_detail_normal_comments_fragment"
+                class="com.ttxg.fruitday.gui.fragment.CommentFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/fragment_detail_comment_lay"/>
+            <!-- 差评fragment-->
+            <fragment
+                android:id="@+id/goods_detail_low_comments_fragment"
+                class="com.ttxg.fruitday.gui.fragment.CommentFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/fragment_detail_comment_lay"/>
+
+            <!--<FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                &lt;!&ndash; 显示详情的webview&ndash;&gt;
+                <FrameLayout
+                    android:id="@+id/goods_detail_introduce_webview_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <WebView
+                        android:id="@+id/goods_detail_introduce_webview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </FrameLayout>
+                &lt;!&ndash; 暂无商品详情/暂无商品评价&ndash;&gt;
+                <TextView
+                    android:id="@+id/goods_detail_no_any"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="@string/no_goods_details"/>
+            </FrameLayout-->>
+        </LinearLayout>
+    </com.ttxg.fruitday.gui.view.WraperScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier"/>
+    <!-- 底部按钮部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/divier2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp">
+        <!-- 加入购物车-->
+        <Button
+            android:id="@+id/goods_detail_add_shopping_cart_btn"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@color/classify_title_select_color"
+            android:text="@string/add_shopping_cart"
+            android:textColor="@color/white"/>
+        <!-- 立即购买-->
+        <Button
+            android:id="@+id/goods_detail_buy_now_btn"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="#ff4400"
+            android:text="@string/buy_now"
+            android:textColor="@color/white"/>
+        <!-- 成为会员-->
+        <Button
+            android:id="@+id/goods_detail_become_vip_btn"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="#f29f32"
+            android:text="@string/become_vip"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>

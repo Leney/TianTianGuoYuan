@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--地址-->
+            <TextView
+                android:id="@+id/order_detail_address_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:lineSpacingExtra="3dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp"
+                android:text="姓名，135858455\n内蒙古是技术分类算法"
+                android:textSize="16sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/divier2"/>
+            <!--店铺名称-->
+            <TextView
+                android:id="@+id/order_detail_store_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="狂野小丹"
+                android:textColor="@color/goods_name_color"
+                android:textSize="@dimen/goods_name_size"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_line_height"
+                android:background="@color/divier2"/>
+            <!-- 显示商品区域-->
+            <LinearLayout
+                android:id="@+id/order_detail_show_goods_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/post_price"
+                    android:textColor="@color/goods_market_price_color"
+                    android:textSize="@dimen/goods_market_price_size"/>
+                <!-- 运费-->
+                <TextView
+                    android:id="@+id/order_detail_post_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥0.4"
+                    android:textColor="#ff0000"
+                    android:textSize="@dimen/goods_market_price_size"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/real_pay_money"
+                    android:textColor="@color/goods_market_price_color"
+                    android:textSize="@dimen/goods_market_price_size"/>
+                <!-- 实付款-->
+                <TextView
+                    android:id="@+id/order_detail_real_pay_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥18.8"
+                    android:textColor="#ff0000"
+                    android:textSize="@dimen/goods_market_price_size"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_line_height"
+                android:background="@color/divier2"/>
+
+            <!-- 订单编号-->
+            <TextView
+                android:id="@+id/order_detail_order_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="订单编号：P2525252505"
+                android:textColor="@color/goods_market_price_color"
+                android:textSize="@dimen/goods_market_price_size"/>
+
+            <!-- 下单时间-->
+            <TextView
+                android:id="@+id/order_detail_create_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="下单时间：2016-09-19 16:42:57"
+                android:textColor="@color/goods_market_price_color"
+                android:textSize="@dimen/goods_market_price_size"/>
+            <!-- 关闭时间-->
+            <TextView
+                android:id="@+id/order_detail_close_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="关闭时间：2016-09-20 16:42:57"
+                android:textColor="@color/goods_market_price_color"
+                android:textSize="@dimen/goods_market_price_size"/>
+            <!-- 发货时间-->
+            <TextView
+                android:id="@+id/order_detail_consign_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="发货时间：2016-09-20 16:42:57"
+                android:textColor="@color/goods_market_price_color"
+                android:textSize="@dimen/goods_market_price_size"/>
+            <!-- 签收时间-->
+            <TextView
+                android:id="@+id/order_detail_sign_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="签收时间：2016-09-20 16:42:57"
+                android:textColor="@color/goods_market_price_color"
+                android:textSize="@dimen/goods_market_price_size"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <!-- 取消订单-->
+        <TextView
+            android:id="@+id/order_detail_cancel_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_red_shape"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="@string/cancel_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/goods_name_size"/>
+        <!-- 取消订单-->
+        <TextView
+            android:id="@+id/order_detail_go_pay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_yellow_solid_shape"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="@string/go_pay2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <!-- 删除订单-->
+        <TextView
+            android:id="@+id/order_detail_delete_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_red_shape"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="@string/delete_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <!-- 确认收货-->
+        <TextView
+            android:id="@+id/order_detail_confirm_take_goods"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_yellow_solid_shape"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="@string/confirm_take_goods"
+            android:textColor="@color/white"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <!-- 去评价-->
+        <TextView
+            android:id="@+id/order_detail_go_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_yellow_solid_shape"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="@string/go_comment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/goods_name_size"/>
+    </LinearLayout>
+</LinearLayout>

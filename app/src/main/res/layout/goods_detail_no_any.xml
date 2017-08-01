@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/goods_detail_commend_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="33.3dp"
+        android:layout_marginLeft="11.3dp"
+        android:layout_marginRight="11.3dp"
+        android:layout_marginTop="11.3dp"
+        android:orientation="horizontal">
+        <!--好评-->
+        <RadioButton
+            android:id="@+id/goods_detail_commend_good"
+            style="@style/radioTabStyle2"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:checked="true"
+            android:text="@string/commends_good"/>
+        <!-- 中评-->
+        <RadioButton
+            android:id="@+id/goods_detail_commend_normal"
+            style="@style/radioTabStyle2"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/commends_normal"/>
+        <!-- 差评-->
+        <RadioButton
+            android:id="@+id/goods_detail_commend_low"
+            style="@style/radioTabStyle2"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/commends_low"/>
+    </RadioGroup>
+
+    <!--<FrameLayout
+        android:id="@+id/goods_detail_comment_fragments_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+    <!-- 好评fragment-->
+    <fragment
+        android:id="@+id/goods_detail_good_comments_fragment"
+        class="com.ttxg.fruitday.gui.fragment.CommentFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!-- 中评fragment-->
+    <fragment
+        android:id="@+id/goods_detail_normal_comments_fragment"
+        class="com.ttxg.fruitday.gui.fragment.CommentFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!-- 差评fragment-->
+    <fragment
+        android:id="@+id/goods_detail_low_comments_fragment"
+        class="com.ttxg.fruitday.gui.fragment.CommentFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!--</FrameLayout>-->
+    <!-- 评论列表-->
+    <!--<ListView
+        android:id="@+id/goods_detail_commend_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#00000000"
+        android:dividerHeight="0dp"
+        android:listSelector="#00000000"/>-->
+    <!-- 没有评价-->
+    <!--<TextView
+        android:id="@+id/goods_detail_commends_no_any"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:text="@string/no_goods_commends"/>-->
+</LinearLayout>

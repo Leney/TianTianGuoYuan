@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+              android:paddingTop="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:text="@string/phone_num"
+        android:textColor="@color/goods_sales_color"
+        android:textSize="@dimen/goods_name_size"/>
+
+    <EditText
+        android:id="@+id/binding_phone_input_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/rectangle_shape"
+        android:digits="0123456789"
+        android:gravity="center_vertical"
+        android:hint="@string/binding_phone_hint"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingBottom="8dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="8dp"
+        android:singleLine="true"
+        android:textColorHint="#aaaaaa"
+        android:textSize="@dimen/goods_name_size"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/code"
+        android:textColor="@color/goods_sales_color"
+        android:textSize="@dimen/goods_name_size"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/binding_phone_input_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_shape"
+            android:digits="0123456789"
+            android:gravity="center_vertical"
+            android:hint="@string/code_hind"
+            android:inputType="number"
+            android:maxLength="8"
+            android:paddingBottom="8dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:textColorHint="#aaaaaa"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <com.ttxg.fruitday.gui.view.CountDownTextView
+            android:id="@+id/binding_phone_get_code_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/divier"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/get_code"
+            android:textColor="@color/goods_sales_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/binding_warm_pro"
+        android:textColor="#ff0000"
+        android:textSize="@dimen/goods_name_size"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/binding_phone_sure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/rectangle_soid_red_shape"
+            android:textSize="@dimen/goods_market_price_size"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="@string/sure"/>
+
+        <Button
+            android:id="@+id/binding_phone_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/rectangle_gray_shape"
+            android:textSize="@dimen/goods_market_price_size"
+            android:gravity="center"
+            android:text="@string/cancel"/>
+    </LinearLayout>
+</LinearLayout>

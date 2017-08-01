@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <!-- 标题-->
+    <com.ttxg.fruitday.gui.view.BaseTitleView
+        android:id="@+id/base_activity_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"/>
+    <!-- 子视图可能新增加的视图-->
+    <RelativeLayout
+        android:id="@+id/base_activity_add_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/base_activity_title"
+        android:visibility="gone"/>
+    <!-- 正在加载的部分-->
+    <ProgressBar
+        android:id="@+id/base_activity_loading"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminateDrawable="@drawable/progress_bg"
+        android:indeterminateOnly="true"
+        android:indeterminateBehavior="repeat"
+        android:layout_centerInParent="true"/>
+    <!-- 正常加载完成显示视图部分 -->
+    <RelativeLayout
+        android:id="@+id/base_activity_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/base_activity_add_lay"/>
+    <!-- 加载失败部分-->
+    <TextView
+        android:id="@+id/base_activity_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/load_failed"
+        android:drawablePadding="10dp"
+        android:text="@string/load_error_and_retry"/>
+
+    <!-- 没有数据-->
+    <RelativeLayout
+        android:id="@+id/base_activity_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/base_fragment_no_data_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_data"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/base_fragment_no_data_img"
+            android:layout_marginTop="10dp"
+            android:text="@string/no_data"/>
+    </RelativeLayout>
+</RelativeLayout>

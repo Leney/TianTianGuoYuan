@@ -1,0 +1,9 @@
+//正式地址
+MAIN_URL=aHR0cDovL2FwaS5peXVuYmFuZy5jbi95eHMv
+IS_LOG=true
+
+//测试地址
+MAIN_URL=aHR0cDovLzE5Mi4xNjguMS40Mzo4MDgwL3l4cy8=
+IS_LOG=true
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ListView的头部 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeeeee">
+
+    <!-- 内容 -->
+
+    <RelativeLayout
+        android:id="@+id/head_contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <!-- 箭头 -->
+
+        <ImageView
+            android:id="@+id/head_arrowImageView"
+            android:layout_width="16dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/pull_icon_big" />
+        <!-- 进度条 -->
+        <ProgressBar
+            android:id="@+id/head_progressBar"
+            android:indeterminateDrawable="@drawable/progress_bg2"
+            android:indeterminateOnly="true"
+            android:indeterminateBehavior="repeat"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

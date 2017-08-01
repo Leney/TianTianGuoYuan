@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/divier2"
+              android:orientation="horizontal"
+              android:padding="10dp"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/shopping_cart_group_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/goods_name_size"
+        android:textColor="@color/goods_name_color"
+        android:text="狂野小丹"/>
+
+    <TextView
+        android:id="@+id/shopping_cart_group_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/goods_market_price_size"
+        android:textColor="@color/classify_title_unsetlect_color"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp"
+        android:text="@string/delete_shop_goods"/>
+</LinearLayout>

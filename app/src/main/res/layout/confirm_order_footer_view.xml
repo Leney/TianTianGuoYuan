@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="10dp">
+    <!-- 商品总额-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/goods_total"
+            android:textSize="@dimen/goods_name_size"
+            android:textColor="@color/goods_name_color"/>
+        <TextView
+            android:id="@+id/confirm_order_footer_goods_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥：0.0"
+            android:textSize="@dimen/goods_name_size"
+            android:textColor="@color/goods_name_color"/>
+    </LinearLayout>
+
+    <!-- 运费总额-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/post_total"
+            android:textSize="@dimen/goods_name_size"
+            android:textColor="@color/goods_name_color"/>
+        <TextView
+            android:id="@+id/confirm_order_footer_post_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥：0.0"
+            android:textSize="@dimen/goods_name_size"
+            android:textColor="@color/goods_name_color"/>
+    </LinearLayout>
+
+    <!-- 给卖家留言-->
+    <EditText
+        android:id="@+id/confirm_order_footer_leave_msg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/leave_message"
+        android:textSize="@dimen/goods_name_size"
+        android:textColor="@color/goods_name_color"
+        android:paddingLeft="3dp"
+        android:background="@drawable/rectangle_shape"/>
+</LinearLayout>

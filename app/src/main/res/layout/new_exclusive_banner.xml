@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/new_exclusive_header_icon"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        fresco:actualImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/banner_default"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="30dp"
+            android:background="@color/classify_title_select_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/quota_tips"
+            android:textSize="@dimen/goods_name_size"
+            android:textColor="@color/classify_title_select_color"/>
+    </LinearLayout>
+</LinearLayout>

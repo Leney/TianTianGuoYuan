@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/divier2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/icon_success"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/you_order_success"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_center_white_shape"
+            android:orientation="vertical">
+            <!--订单号部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/order_num"
+                    android:textColor="@color/goods_name_color"
+                    android:textSize="@dimen/goods_price_size"/>
+
+                <View
+                    android:layout_width="@dimen/split_line_height"
+                    android:layout_height="match_parent"
+                    android:background="@color/divier2"/>
+                <!--订单号-->
+                <TextView
+                    android:id="@+id/create_success_order_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="00000000"
+                    android:textColor="#ff0000"
+                    android:textSize="@dimen/goods_price_size"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_line_height"
+                android:background="@color/divier2"/>
+            <!--支付金额部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/pay_money"
+                    android:textColor="@color/goods_name_color"
+                    android:textSize="@dimen/goods_price_size"/>
+
+                <View
+                    android:layout_width="@dimen/split_line_height"
+                    android:layout_height="match_parent"
+                    android:background="@color/divier2"/>
+                <!--支付金额-->
+                <TextView
+                    android:id="@+id/create_success_pay_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="￥888"
+                    android:textColor="#ff0000"
+                    android:textSize="@dimen/goods_price_size"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 收货人-->
+        <TextView
+            android:id="@+id/create_success_take_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="收货人：李天一"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_price_size"/>
+        <!-- 联系电话-->
+        <TextView
+            android:id="@+id/create_success_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="联系电话：15254468585"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_price_size"/>
+        <!-- 联系地址-->
+        <TextView
+            android:id="@+id/create_success_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="联系地址：广东省深圳市南山区天安云谷"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_price_size"/>
+    </LinearLayout>
+
+    <!--去付款-->
+    <TextView
+        android:id="@+id/create_success_go_pay_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/classify_title_select_color"
+        android:text="@string/go_pay2"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/title_text_size"/>
+</LinearLayout>

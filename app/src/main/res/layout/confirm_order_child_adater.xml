@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/confirm_order_child_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            fresco:placeholderImage="@drawable/icon_default"/>
+
+        <TextView
+            android:id="@+id/confirm_order_child_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/confirm_order_child_icon"
+            android:layout_toRightOf="@id/confirm_order_child_icon"
+            android:maxLines="1"
+            android:layout_marginTop="8dp"
+            android:text="大苹果"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <View
+            android:id="@+id/confirm_order__child_split_view"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_toEndOf="@id/confirm_order_child_icon"
+            android:layout_toRightOf="@id/confirm_order_child_icon"
+            android:layout_below="@id/confirm_order_child_goods_name"/>
+
+
+        <TextView
+            android:id="@+id/confirm_order_sku_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/confirm_order_child_icon"
+            android:layout_toRightOf="@id/confirm_order_child_icon"
+            android:layout_below="@id/confirm_order__child_split_view"
+            android:maxLines="1"
+            android:text="颜色：蓝色"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+
+        <TextView
+            android:id="@+id/confirm_order_child_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/confirm_order_child_icon"
+            android:layout_toRightOf="@id/confirm_order_child_icon"
+            android:layout_below="@id/confirm_order_sku_info"
+            android:maxLines="1"
+            android:text="￥1.20"
+            android:textColor="#ff0000"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <TextView
+            android:id="@+id/confirm_order_child_buy_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/confirm_order_child_price"
+            android:layout_toRightOf="@id/confirm_order_child_price"
+            android:layout_below="@id/confirm_order_sku_info"
+            android:layout_alignBaseline="@id/confirm_order_child_price"
+            android:maxLines="1"
+            android:text="数量 x1"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:layout_marginTop="10dp"
+        android:background="@color/divier"/>
+</LinearLayout>

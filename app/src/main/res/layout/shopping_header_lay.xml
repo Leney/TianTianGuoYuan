@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#fee8b1"
+              android:gravity="center"
+              android:orientation="horizontal"
+              android:paddingBottom="12dp"
+              android:paddingTop="12dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/shopping_cart_tip_icon"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/shopping_cart_tip_icon"
+        android:gravity="center"
+        android:text="@string/shopping_cart_tips"
+        android:textColor="#635b65"
+        android:textSize="@dimen/goods_name_size"/>
+</LinearLayout>

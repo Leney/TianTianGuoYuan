@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/home_header_horizontal_ad_item"
+        android:layout_width="108.6dp"
+        android:layout_height="108.6dp"
+        android:layout_marginRight="10.6dp"
+        android:layout_marginEnd="10.6dp"
+        android:orientation="vertical"/>
+</FrameLayout>

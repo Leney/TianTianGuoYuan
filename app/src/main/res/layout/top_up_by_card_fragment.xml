@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <!-- 充值卡号部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:gravity="end"
+            android:text="@string/cart_code"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/top_up_cart_code_input"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/rectangle_shape"
+            android:digits="0123456789"
+            android:hint="@string/top_up_input_car_code_hint"
+            android:padding="3dp"
+            android:singleLine="true"
+            android:inputType="number"
+            android:textColorHint="#aaaaaa"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- 充值密码部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:gravity="end"
+            android:text="@string/cart_code_pwd"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/top_up_cart_pwd_input"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/rectangle_shape"
+            android:hint="@string/top_up_input_car_pwd_hint"
+            android:inputType="textPassword"
+            android:padding="3dp"
+            android:singleLine="true"
+            android:textColorHint="#aaaaaa"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/top_up_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/rectangle_soid_red_shape"
+            android:textSize="@dimen/goods_market_price_size"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="@string/sure_top_up"/>
+
+        <Button
+            android:id="@+id/top_up_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/rectangle_gray_shape"
+            android:textSize="@dimen/goods_market_price_size"
+            android:gravity="center"
+            android:text="@string/cancel"/>
+    </LinearLayout>
+
+</LinearLayout>

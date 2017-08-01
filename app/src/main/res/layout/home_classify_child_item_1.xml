@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/home_child_left_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.6dp"
+        android:layout_marginLeft="4.6dp"
+        android:layout_marginStart="4.6dp"
+        android:layout_weight="1"
+        android:background="@drawable/list_item_selector"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+
+        <!--<FrameLayout
+            android:id="@+id/home_child_icon1_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/home_chlid_icon1"
+                android:layout_width="match_parent"
+                android:layout_height="178dp"
+                fresco:placeholderImage="@drawable/icon_default"/>
+            &lt;!&ndash; vip 专享标签&ndash;&gt;
+            <ImageView
+                android:id="@+id/home_child_vip_lab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/vip_lab"/>
+        </FrameLayout>-->
+
+        <com.ttxg.fruitday.gui.view.SimpleDraweeViewLab
+            android:id="@+id/home_chlid_icon1"
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            android:layout_centerHorizontal="true"
+            fresco:placeholderImage="@drawable/icon_default"/>
+
+        <TextView
+            android:id="@+id/home_child_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_chlid_icon1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="黑美人"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <!--左边显示的红色价格-->
+        <TextView
+            android:id="@+id/home_child_left_item_price_left1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_child_name1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:text="￥1500"
+            android:textColor="@color/home_group_color"
+            android:textSize="@dimen/goods_price_size"/>
+
+        <!--左边显示的市场价格-->
+        <com.ttxg.fruitday.gui.view.CenterLineTextView
+            android:id="@+id/home_child_left_item_market_price_left1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_child_name1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:text="￥1500"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+
+        <!--右边显示的红色价格-->
+        <TextView
+            android:id="@+id/home_child_left_item_price_right1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/home_child_name1"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:text="￥1498"
+            android:textColor="@color/home_group_color"
+            android:textSize="@dimen/goods_price_size"/>
+
+        <!--右边显示的市场价格-->
+        <com.ttxg.fruitday.gui.view.CenterLineTextView
+            android:id="@+id/home_child_left_item_market_price_right1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/home_child_name1"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:text="￥1600"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/home_child_right_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.6dp"
+        android:layout_marginEnd="4.6dp"
+        android:layout_marginRight="4.6dp"
+        android:layout_weight="1"
+        android:background="@drawable/list_item_selector"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+
+        <!--<FrameLayout
+            android:id="@+id/home_child_icon2_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/home_chlid_icon2"
+                android:layout_width="match_parent"
+                android:layout_height="178dp"
+                fresco:placeholderImage="@drawable/icon_default"/>
+            &lt;!&ndash; vip 专享标签&ndash;&gt;
+            <ImageView
+                android:id="@+id/home_child_vip_lab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/vip_lab"/>
+        </FrameLayout>-->
+        <com.ttxg.fruitday.gui.view.SimpleDraweeViewLab
+            android:id="@+id/home_chlid_icon2"
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            android:layout_centerHorizontal="true"
+            fresco:placeholderImage="@drawable/icon_default"/>
+
+        <TextView
+            android:id="@+id/home_child_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_chlid_icon2"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="黑美人"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <!-- 左边显示的红色价格-->
+        <TextView
+            android:id="@+id/home_child_right_item_price_left2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_child_name2"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:text="￥1497"
+            android:textColor="@color/home_group_color"
+            android:textSize="@dimen/goods_price_size"/>
+
+        <!--左边显示的市场价格-->
+        <com.ttxg.fruitday.gui.view.CenterLineTextView
+            android:id="@+id/home_child_right_item_market_price_left2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_child_name2"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:text="￥1500"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+
+        <!--右边显示的红色价格-->
+        <TextView
+            android:id="@+id/home_child_right_item_price_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/home_child_name2"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:text="￥1492"
+            android:textColor="@color/home_group_color"
+            android:textSize="@dimen/goods_price_size"/>
+
+        <!--右边显示的市场价格-->
+        <com.ttxg.fruitday.gui.view.CenterLineTextView
+            android:id="@+id/home_child_right_item_market_price_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/home_child_name2"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:text="￥1600"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+    </RelativeLayout>
+</LinearLayout>

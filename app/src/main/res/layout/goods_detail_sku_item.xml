@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/white"/>
+
+
+    <FrameLayout
+        android:id="@+id/goods_detail_sku_item_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/goods_detail_sku_item_selector">
+
+        <TextView
+            android:id="@+id/goods_detail_sku_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="黄色"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+
+        <View
+            android:id="@+id/goods_detail_sku_select_view"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="end|bottom"
+            android:background="@drawable/select_bg"/>
+    </FrameLayout>
+</LinearLayout>

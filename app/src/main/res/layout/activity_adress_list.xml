@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.ttxg.fruitday.gui.view.RefreshListView
+        android:id="@+id/address_list_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- 没有数据-->
+    <LinearLayout
+        android:id="@+id/address_list_no_data_lay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/base_fragment_no_data_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_data"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/no_data"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/address_list_add_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="#ff0000"
+        android:textColor="@color/white"
+        android:text="@string/add_new_address2"
+        android:gravity="center"
+        android:textSize="@dimen/goods_name_size"/>
+</LinearLayout>

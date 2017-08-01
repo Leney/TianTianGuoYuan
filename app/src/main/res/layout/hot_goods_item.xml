@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/hot_item_lay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/list_item_selector">
+        <!--<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="126dp">-->
+
+        <!--<FrameLayout
+            android:id="@+id/hot_item_icon_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11.3dp"
+            android:layout_marginStart="11.3dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/hot_item_img"
+                android:layout_width="101.3dp"
+                android:layout_height="101.3dp"
+                android:background="#dddddd"
+                fresco:placeholderImage="@drawable/icon_default"/>
+
+            &lt;!&ndash; vip 专享标签&ndash;&gt;
+            <ImageView
+                android:id="@+id/hot_item_vip_lab"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/vip_lab"/>
+        </FrameLayout>-->
+        <com.ttxg.fruitday.gui.view.SimpleDraweeViewLab
+            android:id="@+id/hot_item_img"
+            android:layout_width="101.3dp"
+            android:layout_height="101.3dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11.3dp"
+            android:layout_marginStart="11.3dp"
+            android:background="#dddddd"
+            fresco:placeholderImage="@drawable/icon_default"/>
+
+        <!--<View
+            android:id="@+id/hot_item_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/hot_item_img"
+            android:layout_toRightOf="@id/hot_item_img"
+            android:background="#ff0000"/>-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/hot_item_img"
+            android:layout_toRightOf="@id/hot_item_img">
+            <!-- 名称-->
+            <TextView
+                android:id="@+id/hot_item_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:text="芒果"
+                android:textColor="@color/goods_name_color"
+                android:textSize="@dimen/goods_name_size"/>
+            <!-- 左边价格-->
+            <TextView
+                android:id="@+id/hot_item_price_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hot_item_goods_name"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="￥1200"
+                android:textColor="@color/home_group_color"
+                android:textSize="@dimen/goods_name_size"/>
+
+            <!-- 左边市场价原价-->
+            <com.ttxg.fruitday.gui.view.CenterLineTextView
+                android:id="@+id/hot_item_market_price_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hot_item_goods_name"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="￥1200"
+                android:textColor="@color/goods_market_price_color"
+                android:textSize="@dimen/goods_market_price_size"/>
+
+            <!-- 右边价格-->
+            <TextView
+                android:id="@+id/hot_item_price_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hot_item_goods_name"
+                android:layout_marginLeft="28dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/hot_item_price_left"
+                android:layout_toRightOf="@id/hot_item_price_left"
+                android:text="￥1500"
+                android:textColor="@color/home_group_color"
+                android:textSize="@dimen/goods_name_size"/>
+
+            <!-- 右边市场-->
+            <com.ttxg.fruitday.gui.view.CenterLineTextView
+                android:id="@+id/hot_item_market_price_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hot_item_goods_name"
+                android:layout_marginLeft="28dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/hot_item_price_left"
+                android:layout_toRightOf="@id/hot_item_price_left"
+                android:text="￥1500"
+                android:textColor="@color/goods_market_price_color"
+                android:textSize="@dimen/goods_market_price_size"/>
+        </RelativeLayout>
+        <!--</RelativeLayout>-->
+        <View
+            android:id="@+id/hot_item_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@id/hot_item_img"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:layout_marginBottom="1dp"
+        android:background="@color/divier"/>
+</LinearLayout>

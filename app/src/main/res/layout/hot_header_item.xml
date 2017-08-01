@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <!--顶部banner-->
+    <com.jude.rollviewpager.RollPagerView
+        android:id="@+id/home_banner"
+        android:layout_width="match_parent"
+        android:layout_height="202.6dp"
+        app:rollviewpager_hint_gravity="right"
+        app:rollviewpager_play_delay="3000"/>
+
+    <!--<com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/home_kdxf_banner_lay"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>-->
+
+    <FrameLayout
+        android:id="@+id/home_kdxf_banner_lay"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/home_kdxf_banner_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/home_kdxf_banner_ad_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:background="#88666666"
+            android:paddingBottom="1dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="1dp"
+            android:text="@string/ad"
+            android:textColor="@color/white"
+            android:textSize="10sp"/>
+    </FrameLayout>
+    <!--<CustomTextView
+        android:id="@+id/home_header_show_message"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="云邦信息轮播"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:textSize="@dimen/goods_name_size"
+        android:textColor="@color/goods_name_color"/>-->
+    <!-- 中间水平banner-->
+    <!--<HorizontalScrollView
+        android:id="@+id/home_header_horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:background="#f0f0f0"
+        android:paddingBottom="6.6dp">
+        <LinearLayout
+            android:id="@+id/home_header_horizontal_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:orientation="horizontal"/>
+    </HorizontalScrollView>-->
+    <!-- 热销推荐部分-->
+    <!--<LinearLayout
+        android:id="@+id/home_header_hot_title_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical">
+        <View
+            android:layout_width="3dp"
+            android:layout_height="20dp"
+            android:background="@color/home_group_color"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/home_header_hot_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/home_group_color"
+            android:layout_weight="1"
+            android:text="新鲜水果"/>
+        <TextView
+            android:id="@+id/home_header_hot_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="更多>>"
+            android:gravity="center_vertical"
+            android:layout_marginRight="5dp"/>
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/divier2"
+        android:orientation="horizontal"
+        android:paddingBottom="19dp"
+        android:paddingTop="19dp">
+
+        <TextView
+            android:id="@+id/home_tab_ad_0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/home_ad_0"
+            android:gravity="center_horizontal"
+            android:text="@string/new_exclusive"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+
+        <TextView
+            android:id="@+id/home_tab_ad_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/home_ad_1"
+            android:gravity="center_horizontal"
+            android:text="@string/top_up_get_gift"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+
+        <TextView
+            android:id="@+id/home_tab_ad_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/home_ad_2"
+            android:gravity="center_horizontal"
+            android:text="@string/member_cart"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+        <!--<TextView
+            android:id="@+id/home_tab_ad_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/home_ad_3"
+            android:gravity="center_horizontal"
+            android:text="@string/bee_recruit"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/goods_market_price_size"/>-->
+    </LinearLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/home_header_hot_title_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/home_group_info_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/home_header_hot_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="新鲜水果 "
+                android:textColor="@color/goods_name_color"
+                android:textSize="24sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/home_goup_bottom_line"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/home_group_info_lay"
+            android:layout_toStartOf="@id/home_group_info_lay"
+            android:src="@drawable/home_group_left_icon"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/home_group_info_lay"
+            android:layout_toRightOf="@id/home_group_info_lay"
+            android:src="@drawable/home_group_right_icon"/>
+
+        <TextView
+            android:id="@+id/home_header_hot_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="end|center_vertical"
+            android:paddingLeft="20dp"
+            android:text="更多>>"/>
+    </RelativeLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier2"/>
+
+    <!-- 热销商品显示区域-->
+    <LinearLayout
+        android:id="@+id/home_header_hot_goods_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:layout_marginTop="6.6dp"
+        android:background="@color/divier2"/>
+</LinearLayout>

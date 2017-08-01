@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ListView的头部 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeeeee">
+
+    <!-- 内容 -->
+
+    <RelativeLayout
+        android:id="@+id/head_contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <!-- 箭头 -->
+
+        <ImageView
+            android:id="@+id/head_arrowImageView"
+            android:layout_width="16dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/pull_icon_big" />
+        <!-- 进度条 -->
+
+        <ProgressBar
+            android:id="@+id/head_progressBar"
+            android:indeterminateDrawable="@drawable/progress_bg2"
+            android:indeterminateOnly="true"
+            android:indeterminateBehavior="repeat"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <!-- 提示 -->
+
+        <TextView
+            android:id="@+id/head_tipsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pull_to_refresh"
+            android:layout_centerHorizontal="true"
+            android:textColor="#33CCFF"
+            android:textSize="18sp" />
+        <!-- 最近更新 -->
+
+        <TextView
+            android:id="@+id/head_lastUpdatedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/head_tipsTextView"
+            android:text="@string/refresh_date"
+            android:textColor="#888888"
+            android:textSize="10sp" />
+
+
+        <!-- 箭头图像、进度条 -->
+
+        <!--<FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            &lt;!&ndash; 箭头 &ndash;&gt;
+
+            <ImageView
+                android:id="@+id/head_arrowImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/pull_icon_big" />
+            &lt;!&ndash; 进度条 &ndash;&gt;
+
+            <ProgressBar
+                android:id="@+id/head_progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>-->
+        <!-- 提示、最近更新 -->
+
+        <!--<LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            &lt;!&ndash; 提示 &ndash;&gt;
+
+            <TextView
+                android:id="@+id/head_tipsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pull_to_refresh"
+                android:textColor="#33CCFF"
+                android:textSize="20sp" />
+            &lt;!&ndash; 最近更新 &ndash;&gt;
+
+            <TextView
+                android:id="@+id/head_lastUpdatedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/refresh_date"
+                android:textColor="#888888"
+                android:textSize="10sp" />
+        </LinearLayout>-->
+    </RelativeLayout>
+
+</LinearLayout>

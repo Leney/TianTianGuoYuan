@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:background="@drawable/list_item_selector">
+
+    <FrameLayout
+        android:id="@+id/user_center_adater_img_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/user_center_adapter_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="3dp"
+            fresco:placeholderImage="@drawable/icon_default"/>
+        <!-- 数量-->
+        <TextView
+            android:id="@+id/user_center_adapter_num"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="end"
+            android:background="@drawable/circle_red_shape"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12sp" />
+    </FrameLayout>
+    <!-- menu名称-->
+    <TextView
+        android:id="@+id/user_center_adapter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/user_center_adater_img_lay"
+        android:text="@string/not_pay"
+        android:textColor="@color/goods_name_color" />
+
+</RelativeLayout>

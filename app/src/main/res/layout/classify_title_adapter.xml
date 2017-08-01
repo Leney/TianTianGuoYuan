@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/classify_title_lay"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/classify_title_selector">
+        <View
+            android:id="@+id/classify_title_select_view"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:background="@color/tab_text_color_select"/>
+        <TextView
+            android:id="@+id/classify_title_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/classify_title_name_selector"
+            android:text="食品生鲜"/>
+        <View
+            android:id="@+id/classify_title_right_line"
+            android:layout_width="@dimen/split_line_height"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:background="@color/classify_title_right_line"/>
+    </LinearLayout>
+</LinearLayout>

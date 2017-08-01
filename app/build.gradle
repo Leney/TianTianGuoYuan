@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.ttxg.fruitday"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "V1.0"
+        // 控制日志Log 输出打印
+        buildConfigField("boolean", "enableLog", "true")
+    }
+    buildTypes {
+        release {
+            // 控制日志Log 输出打印
+            buildConfigField("boolean", "enableLog", "false")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.1.1'
+    // volley插件
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    // EventBus插件
+    compile 'org.greenrobot:eventbus:3.0.0'
+    // 向左滑动删除item插件
+    //    compile 'com.baoyz.swipemenulistview:library:1.3.0'
+    // gson插件
+    compile 'com.google.code.gson:gson:2.7'
+    // 图片显示插件
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    // banner轮播
+    compile 'com.jude:rollviewpager:1.3.4'
+    compile files('libs/libammsdk.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile files('libs/alipaySdk-20161009.jar')
+    compile files('libs/Ad_Android_SDK.jar')
+}

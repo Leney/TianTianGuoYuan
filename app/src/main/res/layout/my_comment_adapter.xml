@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/my_comment_adapter_user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="用户名"
+            android:layout_weight="1"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+        <RatingBar
+            android:id="@+id/my_comment_adapter_star"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="14dp"
+            android:isIndicator="true"
+            android:progressDrawable="@drawable/rattingbar_samll_drawable"
+            android:rating="5"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/my_comment_adapter_goods_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            fresco:placeholderImage="@drawable/icon_default"/>
+
+        <TextView
+            android:id="@+id/my_comment_adapter_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="大苹果"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/divier2"/>
+
+    <TextView
+        android:id="@+id/my_comment_adapter_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="评论内容。。"
+        android:lineSpacingExtra="2dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/goods_market_price_color"
+        android:textSize="@dimen/goods_market_price_size"/>
+
+    <TextView
+        android:id="@+id/my_comment_adapter_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2016-10-13 10:12:46"
+        android:gravity="end"
+        android:paddingBottom="15dp"
+        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@color/goods_market_price_color"
+        android:textSize="@dimen/goods_market_price_size"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/divier2"/>
+</LinearLayout>

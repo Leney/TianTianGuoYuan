@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/comment_order_goods_adapter_goods_icon"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            fresco:placeholderImage="@drawable/icon_default"/>
+
+        <TextView
+            android:id="@+id/comment_order_goods_adapter_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/comment_order_goods_adapter_goods_icon"
+            android:layout_toRightOf="@id/comment_order_goods_adapter_goods_icon"
+            android:maxLines="1"
+            android:text="大苹果"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <TextView
+            android:id="@+id/comment_order_goods_adapter_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/comment_order_goods_adapter_goods_icon"
+            android:layout_toRightOf="@id/comment_order_goods_adapter_goods_icon"
+            android:maxLines="1"
+            android:text="￥1.20"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="@dimen/goods_name_size"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <RadioGroup
+        android:id="@+id/comment_order_goods_adapter_comment_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <!-- 好评-->
+        <RadioButton
+            android:id="@+id/comment_order_goods_adapter_comment_well"
+            style="@style/orderCommentStyle"
+            android:checked="true"
+            android:drawableLeft="@drawable/order_comment_selector"
+            android:drawableStart="@drawable/order_comment_selector"
+            android:text="@string/commends_good"/>
+        <!-- 中评-->
+        <RadioButton
+            android:id="@+id/comment_order_goods_adapter_comment_normal"
+            style="@style/orderCommentStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:drawableLeft="@drawable/order_comment_selector"
+            android:drawableStart="@drawable/order_comment_selector"
+            android:text="@string/commends_normal"/>
+        <!-- 差评-->
+        <RadioButton
+            android:id="@+id/comment_order_goods_adapter_comment_low"
+            style="@style/orderCommentStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:drawableLeft="@drawable/order_comment_selector"
+            android:drawableStart="@drawable/order_comment_selector"
+            android:text="@string/commends_low"/>
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <RatingBar
+        android:id="@+id/comment_order_goods_adapter_comment_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/rattingbar_big_drawable"
+        android:minHeight="20dp"
+        android:layout_marginTop="6dp"
+        android:numStars="5"
+        android:stepSize="1"
+        android:rating="5"
+        android:isIndicator="false"
+        android:layout_margin="10dp"/>
+
+
+    <EditText
+        android:id="@+id/comment_order_goods_adapter_comment_input"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/rectangle_shape"
+        android:hint="@string/comment_order_hint"
+        android:textColor="@color/goods_name_color"
+        android:gravity="top"
+        android:padding="5dp"
+        android:maxLength="150"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/goods_market_price_size"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier"/>
+</LinearLayout>

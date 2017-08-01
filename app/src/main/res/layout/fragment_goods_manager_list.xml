@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- 找到相关商品多少件-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/search_goods"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/goods_name_color"/>
+        <!-- 总数-->
+        <TextView
+            android:id="@+id/goods_manager_amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:gravity="center_vertical"
+            android:textColor="#ff0000"
+            android:textSize="@dimen/text_size_12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/piece"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/goods_name_color"/>
+    </LinearLayout>
+
+    <com.ttxg.fruitday.gui.view.WraperListView
+        android:id="@+id/goods_manager_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
+</LinearLayout>

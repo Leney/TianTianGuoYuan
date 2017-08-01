@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/rectangle_soild_white_shape"
+              android:gravity="center_horizontal"
+              android:minWidth="280dp"
+              android:orientation="vertical"
+              android:paddingBottom="20dp"
+              android:paddingTop="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/please_input_pay_pwd"
+        android:textColor="@color/goods_name_color"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/pay_price"
+        android:textColor="@color/goods_sales_color"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/balance_pay_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="￥0.00"
+        android:textColor="#000000"
+        android:textSize="28sp"/>
+
+    <com.ttxg.fruitday.gui.view.PasswordInputView
+        android:id="@+id/balance_pay_pwd_input"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="8dp"
+        android:background="#00000000"
+        android:cursorVisible="false"
+        android:inputType="number"
+        android:maxLength="6"
+        app:pivPasswordLength="6"
+        app:pivBorderColor="@color/pwd_input_line_color"
+        app:pivBorderRadius="2dp"
+        app:pivBorderWidth="1dp"
+        app:pivPasswordColor="#000000"
+        app:pivPasswordWidth="5dp"/>
+
+    <Button
+        android:id="@+id/balance_pay_now_btn"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_soid_red_shape"
+        android:gravity="center"
+        android:text="@string/pay_now"
+        android:textColor="@color/white"
+        android:textSize="@dimen/goods_market_price_size"/>
+</LinearLayout>

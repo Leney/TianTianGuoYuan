@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="11.3dp"
+                android:paddingRight="11.3dp">
+
+    <TextView
+        android:id="@+id/comment_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="用户名"
+        android:textColor="@color/goods_name_color"
+        android:textSize="@dimen/goods_name_size"/>
+
+    <RatingBar
+        android:id="@+id/comment_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="6dp"
+        android:minHeight="14dp"
+        android:isIndicator="true"
+        android:progressDrawable="@drawable/rattingbar_samll_drawable"
+        android:rating="5"/>
+
+    <View
+        android:id="@+id/comment_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:layout_below="@id/comment_user_name"/>
+
+    <TextView
+        android:id="@+id/comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment_empty_view"
+        android:layout_marginTop="10dp"
+        android:text="评论内容"
+        android:textColor="@color/goods_market_price_color"
+        android:textSize="@dimen/goods_market_price_size"/>
+
+    <TextView
+        android:id="@+id/comment_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment_content"
+        android:layout_marginTop="5dp"
+        android:text="2016-8-25 17:42"
+        android:textColor="@color/goods_market_price_color"
+        android:textSize="@dimen/goods_market_price_size"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:layout_below="@id/comment_date"
+        android:layout_marginTop="10dp"
+        android:background="#dddddd"/>
+</RelativeLayout>

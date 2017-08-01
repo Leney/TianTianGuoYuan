@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.ttxg.fruitday">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 定位权限-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 微信支付权限-->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <!-- 支付宝权限-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- 科大讯飞权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES"/>
+
+    <application
+        android:name="com.ttxg.fruitday.AppApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- 科大讯飞-->
+        <meta-data android:name="IFLYTEK_APPKEY_AD" android:value="591ad7cb"/>
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.FullScreenAdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 主页界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <!-- 商品详情界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.GoodsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 搜索商品界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 更多商品界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.MoreGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 云店铺详情界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.StoreDitailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 登陆界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 注册界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 个人资料界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.ModifyPersonageInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 添加地址界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.AddNewAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 地址列表管理界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.AddressListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 编辑地址界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.EditAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 确认订单界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.ConfirmOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 立即购买确认订单界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.BuyNowConfirmOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 创建订单成功界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.CreateOrderSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 订单列表界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.OrderListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 确认支付界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.ConfirmPayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="wxa9ce91980a596169"/>
+            </intent-filter>
+        </activity>
+        <!-- 订单详情界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 我的商品管理界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.GoodsManagerListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 选择商品界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.ChoiceGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 评价订单商品界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.CommentOrderGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 我的评价界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.MyCommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 余额界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.RemainingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 充值卡充值界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.TopUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 充值详情界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.TopUpDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 绑定手机界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.BindingPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 安全设置界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.SafetySettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 设置提现密码界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.SettingWithdrawPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 修改提现密码界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.ModifyWithdrawPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 忘记密码界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.ResetWithdrawPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 更改绑定手机号码界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.ChangePhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 我的积分界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.MyIntegralActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 设置支付密码界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.SettingPayPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 修改支付密码界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.ModifyPayPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 忘记支付密码界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.ResetPayPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 找回登陆密码界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.ResetLoginPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 修改登陆密码界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.ModifyLoginPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 成为会员界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.ToBeVipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 设置关于界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 新人专区界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.NewExclusiveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- web界面-->
+        <activity
+            android:name="com.ttxg.fruitday.gui.activity.WebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 微信支付返回结果界面-->
+        <activity
+            android:name="com.ttxg.fruitday.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!-- 支付宝h5支付界面-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"/>
+        <!-- 支付宝界面-->
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"/>
+
+        <!-- 科大讯飞组件声明-->
+        <service
+            android:name="com.iflytek.voiceads.update.DownloadService"/>
+        <activity
+            android:name="com.iflytek.voiceads.request.IFLYBrowser"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/search_child_lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/list_item_selector"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/search_chlid_icon1"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            fresco:placeholderImage="@drawable/icon_default"/>
+
+        <TextView
+            android:id="@+id/search_child_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_chlid_icon1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="黑美人"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size" />
+
+        <TextView
+            android:id="@+id/search_child_price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_child_name1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:text="￥1500"
+            android:textColor="@color/home_group_color"
+            android:textSize="@dimen/goods_price_size" />
+
+        <com.ttxg.fruitday.gui.view.CenterLineTextView
+            android:id="@+id/search_child_market_price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/search_child_name1"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:text="￥1600"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="@dimen/goods_market_price_size" />
+
+        <TextView
+            android:id="@+id/search_child_comment1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_child_price1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:text="0人评价"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_sales_size" />
+
+        <TextView
+            android:id="@+id/search_child_sales1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_child_price1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="3dp"
+            android:text="销量：18"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_sales_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/search_child_lay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/list_item_selector"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/search_chlid_icon2"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            fresco:placeholderImage="@drawable/icon_default"/>
+
+        <TextView
+            android:id="@+id/search_child_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_chlid_icon2"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="黑美人"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size" />
+
+        <TextView
+            android:id="@+id/search_child_price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_child_name2"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:text="￥1500"
+            android:textColor="@color/home_group_color"
+            android:textSize="@dimen/goods_price_size" />
+
+        <com.ttxg.fruitday.gui.view.CenterLineTextView
+            android:id="@+id/search_child_market_price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/search_child_name2"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:text="￥1600"
+            android:textColor="@color/goods_market_price_color"
+            android:textSize="@dimen/goods_market_price_size" />
+
+        <TextView
+            android:id="@+id/search_child_comment2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_child_price2"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:text="0人评价"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_sales_size" />
+
+        <TextView
+            android:id="@+id/search_child_sales2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_child_price2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="3dp"
+            android:text="销量：18"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_sales_size" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RadioGroup
+        android:id="@+id/my_comment_radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:padding="10dp">
+        <!--好评-->
+        <RadioButton
+            android:id="@+id/my_comment_good"
+            style="@style/radioTabStyle3"
+            android:checked="true"
+            android:text="@string/commends_good"/>
+        <!-- 中评-->
+        <RadioButton
+            android:id="@+id/my_comment_normal"
+            style="@style/radioTabStyle3"
+            android:text="@string/commends_normal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+        <!-- 差评-->
+        <RadioButton
+            android:id="@+id/my_comment_low"
+            style="@style/radioTabStyle3"
+            android:text="@string/commends_low" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/my_comment_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ttxg.fruitday.gui.view.WraperWebView
+        android:id="@+id/goods_detail_introduce_webview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:overScrollMode="never"/>
+    <!-- 暂无商品详情-->
+    <TextView
+        android:id="@+id/goods_detail_introduce_no_any"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:text="@string/no_goods_details"/>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/choice_goods_spinner"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:entries="@array/classifies"/>
+        <EditText
+            android:id="@+id/choice_goods_search_input"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:textColor="@color/goods_name_color"
+            android:hint="@string/choice_goods_search_hint"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/goods_market_price_size"/>
+
+        <ImageView
+            android:id="@+id/choice_goods_search_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_search2"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier2"/>
+
+    <!-- 找到相关商品多少件-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/search_goods"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/goods_name_color"/>
+        <!-- 总数-->
+        <TextView
+            android:id="@+id/choice_goods_amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:gravity="center_vertical"
+            android:textColor="#ff0000"
+            android:textSize="@dimen/text_size_12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/piece"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/goods_name_color"/>
+    </LinearLayout>
+</LinearLayout>

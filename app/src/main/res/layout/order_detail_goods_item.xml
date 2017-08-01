@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/order_detail_goods_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        fresco:placeholderImage="@drawable/icon_default"/>
+
+    <TextView
+        android:id="@+id/order_detail_goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/order_detail_goods_icon"
+        android:layout_toRightOf="@id/order_detail_goods_icon"
+        android:text="大苹果"
+        android:textColor="@color/goods_name_color"
+        android:textSize="@dimen/goods_name_size"/>
+    <TextView
+        android:id="@+id/order_detail_sku_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/order_detail_goods_name"
+        android:layout_toRightOf="@id/order_detail_goods_icon"
+        android:layout_toEndOf="@id/order_detail_goods_icon"
+        android:maxLines="1"
+        android:text="(颜色：大苹果)"
+        android:textColor="@color/goods_market_price_color"
+        android:textSize="@dimen/goods_market_price_size"/>
+
+    <TextView
+        android:id="@+id/order_detail_buy_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/order_detail_goods_icon"
+        android:layout_toRightOf="@id/order_detail_goods_icon"
+        android:layout_below="@id/order_detail_sku_info"
+        android:layout_marginTop="20dp"
+        android:maxLines="1"
+        android:text="数量 x1"
+        android:textColor="@color/goods_market_price_color"
+        android:textSize="@dimen/goods_market_price_size"/>
+
+    <TextView
+        android:id="@+id/order_detail_goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@id/order_detail_buy_num"
+        android:layout_toRightOf="@id/order_detail_buy_num"
+        android:layout_below="@id/order_detail_sku_info"
+        android:layout_marginTop="20dp"
+        android:maxLines="1"
+        android:text="￥1.20"
+        android:textColor="#ff0000"
+        android:textSize="@dimen/goods_name_size"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:layout_below="@id/order_detail_goods_icon"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/divier2"/>
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+    <!-- 子视图可能新增加的视图-->
+    <RelativeLayout
+        android:id="@+id/base_fragment_add_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/base_activity_title"
+        android:visibility="gone"/>
+    <!-- 正在加载的部分-->
+    <ProgressBar
+        android:id="@+id/base_fragment_loading"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/progress_bg"
+        android:indeterminateOnly="true"/>
+    <!-- 正常加载完成显示视图部分 -->
+    <RelativeLayout
+        android:id="@+id/base_fragment_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/base_fragment_add_lay"
+        android:layout_centerInParent="true"/>
+    <!-- 加载失败部分-->
+    <TextView
+        android:id="@+id/base_fragment_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/load_failed"
+        android:gravity="center_horizontal"
+        android:text="@string/load_error_and_retry"/>
+    <!-- 没有数据-->
+    <RelativeLayout
+        android:id="@+id/base_fragment_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/base_fragment_no_data_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/no_data"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/base_fragment_no_data_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/no_data"/>
+    </RelativeLayout>
+</RelativeLayout>

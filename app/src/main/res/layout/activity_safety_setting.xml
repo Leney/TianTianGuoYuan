@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <!-- 已绑定的手机号-->
+    <LinearLayout
+        android:id="@+id/safety_setting_binding_phone_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:id="@+id/safety_setting_binding_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="已绑定手机号：151****2006"
+            android:textColor="@color/goods_name_color"
+            android:drawableLeft="@drawable/phone_icon"
+            android:drawableStart="@drawable/phone_icon"
+            android:drawablePadding="10dp"
+            android:textSize="@dimen/goods_name_size"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier2"/>
+
+    <!-- 修改登录密码-->
+    <LinearLayout
+        android:id="@+id/safety_setting_modify_login_pwd_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="@string/modify_login_pwd"
+            android:textColor="@color/goods_name_color"
+            android:drawableLeft="@drawable/set_pwd_icon"
+            android:drawableStart="@drawable/set_pwd_icon"
+            android:drawablePadding="10dp"
+            android:textSize="@dimen/goods_name_size"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"/>
+    </LinearLayout>
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier2"/>-->
+
+    <!-- 设置提现密码-->
+    <!--<LinearLayout
+        android:id="@+id/safety_setting_withdraw_pwd_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="@string/setting_withdraw_pwd"
+            android:textColor="@color/goods_name_color"
+            android:drawableLeft="@drawable/set_pwd_icon"
+            android:drawableStart="@drawable/set_pwd_icon"
+            android:drawablePadding="10dp"
+            android:textSize="@dimen/goods_name_size"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier2"/>-->
+
+    <!-- 忘记提现密码-->
+    <!--<LinearLayout
+        android:id="@+id/safety_setting_forget_withdraw_pwd_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="@string/forget_withdraw_pwd"
+            android:textColor="@color/goods_name_color"
+            android:drawableLeft="@drawable/forget_pwd_icon"
+            android:drawableStart="@drawable/forget_pwd_icon"
+            android:drawablePadding="10dp"
+            android:textSize="@dimen/goods_name_size"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"/>
+    </LinearLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier2"/>
+
+    <!-- 设置支付密码-->
+    <LinearLayout
+        android:id="@+id/safety_setting_pay_pwd_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="@string/setting_pay_pwd"
+            android:textColor="@color/goods_name_color"
+            android:drawableLeft="@drawable/set_pwd_icon"
+            android:drawableStart="@drawable/set_pwd_icon"
+            android:drawablePadding="10dp"
+            android:textSize="@dimen/goods_name_size"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier2"/>
+
+    <!-- 忘记支付密码-->
+    <LinearLayout
+        android:id="@+id/safety_setting_forget_pay_pwd_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="@string/forget_pay_pwd"
+            android:textColor="@color/goods_name_color"
+            android:drawableLeft="@drawable/forget_pwd_icon"
+            android:drawableStart="@drawable/forget_pwd_icon"
+            android:drawablePadding="10dp"
+            android:textSize="@dimen/goods_name_size"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier2"/>
+
+    <!-- 消息提醒设置-->
+    <!--<LinearLayout
+        android:id="@+id/safety_setting_notify_setting_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="@string/notify_setting"
+            android:textColor="@color/goods_name_color"
+            android:drawableLeft="@drawable/notify_setting_icon"
+            android:drawableStart="@drawable/notify_setting_icon"
+            android:drawablePadding="10dp"
+            android:textSize="@dimen/goods_name_size"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier2"/>-->
+</LinearLayout>

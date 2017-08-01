@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/confirm_order_adapter_group_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/goods_name_size"
+        android:padding="10dp"
+        android:textColor="@color/goods_name_color"
+        android:text="狂野小丹"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/divier"/>
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffa92c"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/stores_fragment_user_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                fresco:roundAsCircle="true"
+                fresco:placeholderImage="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_store"
+                android:layout_marginTop="1dp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <!--云店铺-->
+        <TextView
+            android:id="@+id/stores_fragment_cloud_store_text"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:text="@string/cloud_store"
+            android:gravity="center"
+            android:textColor="@color/store_title_name_selector"
+            android:background="@drawable/store_title_left_selector"/>
+
+        <!--供应商店铺-->
+        <TextView
+            android:id="@+id/stores_fragment_provider_store_text"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:text="@string/provider_store"
+            android:gravity="center"
+            android:textColor="@color/store_title_name_selector"
+            android:background="@drawable/store_title_right_selector"/>
+        
+        <ImageView
+            android:id="@+id/stores_fragment_search_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="3dp"
+            android:src="@drawable/icon_search1"/>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/stores_fragment_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

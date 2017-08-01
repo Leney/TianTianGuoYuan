@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <!-- 收货人-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/consignee"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <EditText
+            android:id="@+id/add_address_consignee_input"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:maxLength="5"
+            android:background="@drawable/rectangle_shape"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+    </LinearLayout>
+
+    <!-- 联系电话-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/telephone"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <EditText
+            android:id="@+id/add_address_telephone_input"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/rectangle_shape"
+            android:digits="0123456789"
+            android:maxLength="11"
+            android:inputType="phone"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+    </LinearLayout>
+
+    <!-- 所在区域-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/area"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <!-- 省份-->
+        <FrameLayout
+            android:id="@+id/add_address_area_province_lay"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/rectangle_shape">
+
+            <Spinner
+                android:id="@+id/add_address_area_province"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:spinnerMode="dropdown"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- 市-->
+    <FrameLayout
+        android:id="@+id/add_address_area_city_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_shape"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="113dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="5dp">
+
+        <Spinner
+            android:id="@+id/add_address_area_city"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:spinnerMode="dropdown"/>
+    </FrameLayout>
+
+    <!-- 城镇-->
+    <FrameLayout
+        android:id="@+id/add_address_area_town_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_shape"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="113dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="5dp">
+
+        <Spinner
+            android:id="@+id/add_address_area_town"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:spinnerMode="dropdown"/>
+    </FrameLayout>
+
+    <!-- 详细地址-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/address_detail"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <EditText
+            android:id="@+id/add_address_detail_input"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/rectangle_shape"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+    </LinearLayout>
+
+    <!-- 邮政编码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/postcode"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+
+        <EditText
+            android:id="@+id/add_address_postcode_input"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/rectangle_shape"
+            android:digits="0123456789"
+            android:maxLength="6"
+            android:inputType="number"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/add_address_save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/classify_title_select_color"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_text_size"/>
+
+</LinearLayout>

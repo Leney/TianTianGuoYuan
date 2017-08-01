@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:background="@drawable/list_item_selector">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/store_item_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/rectangle_shape"
+            android:padding="1dp"
+            fresco:placeholderImage="@drawable/icon_default"/>
+
+        <View
+            android:id="@+id/store_item_empty_view"
+            android:layout_width="80dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/store_item_logo"
+            android:layout_toRightOf="@id/store_item_logo"/>
+
+        <TextView
+            android:id="@+id/store_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/store_item_empty_view"
+            android:layout_toEndOf="@id/store_item_logo"
+            android:layout_toRightOf="@id/store_item_logo"
+            android:text="云店名称"
+            android:textColor="@color/goods_name_color"
+            android:textSize="@dimen/goods_name_size" />
+
+        <LinearLayout
+            android:id="@+id/store_item_content_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_item_empty_view"
+            android:layout_toEndOf="@id/store_item_logo"
+            android:layout_toRightOf="@id/store_item_logo"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/store_item_clssify_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美食"
+                android:textColor="@color/goods_market_price_color"
+                android:textSize="@dimen/goods_market_price_size" />
+
+            <View
+                android:layout_width="@dimen/split_line_height"
+                android:layout_height="16dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginStart="3dp"
+                android:background="@color/divier" />
+
+            <TextView
+                android:id="@+id/store_item_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="南山云谷"
+                android:textColor="@color/goods_market_price_color"
+                android:textSize="@dimen/goods_market_price_size" />
+
+            <View
+                android:layout_width="@dimen/split_line_height"
+                android:layout_height="16dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginStart="3dp"
+                android:background="@color/divier" />
+
+            <TextView
+                android:id="@+id/store_item_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14.58km"
+                android:textColor="@color/goods_market_price_color"
+                android:textSize="@dimen/goods_market_price_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/store_item_send_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/store_item_content_lay"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@id/store_item_logo"
+            android:layout_toRightOf="@id/store_item_logo"
+            android:background="@drawable/rectangle_yellow_shape"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="周边送货"
+            android:textColor="#ffa92c"
+            android:textSize="@dimen/goods_market_price_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_line_height"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divier"/>
+    </RelativeLayout>
+</RelativeLayout>
